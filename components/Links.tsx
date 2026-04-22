@@ -54,7 +54,7 @@ export default function Links() {
             target={href.startsWith('mailto') ? undefined : '_blank'}
             rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
             aria-label={label}
-            className={`group border-t-4 ${topBorder} pt-6 pb-8 flex flex-col gap-3 text-ink ${hover} transition-colors duration-200`}
+            className={`group border-t-4 ${topBorder} pt-6 pb-8 px-6 flex flex-col gap-3 text-ink ${hover} transition-colors duration-200`}
           >
             <Icon className="w-5 h-5" />
             <span className="font-serif text-2xl italic">{label}</span>

@@ -5,10 +5,10 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0 md:divide-x md:divide-burgundy">
           <div className="flex items-start justify-center md:pr-16">
             <span
-              className="font-serif text-[10rem] leading-none text-burgundy font-normal select-none"
+              className="font-serif text-[12rem] leading-none text-burgundy font-normal select-none"
               aria-hidden="true"
             >
-              B
+              &ldquo;
             </span>
           </div>
           <div className="md:pl-16 flex items-center">
