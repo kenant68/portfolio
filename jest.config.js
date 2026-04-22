@@ -6,6 +6,7 @@ const config = {
   coverageProvider: 'v8',
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  transformIgnorePatterns: ['node_modules/(?!(lucide-react)/)'],
 }
 
 module.exports = createJestConfig(config)
