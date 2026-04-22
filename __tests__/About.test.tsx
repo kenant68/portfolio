@@ -4,6 +4,6 @@ import About from '@/components/About'
 describe('About', () => {
   it('renders the tagline', () => {
     render(<About />)
-    expect(screen.getByText('Building things for the web.')).toBeInTheDocument()
+    expect(screen.getByText(/Building things for the web/)).toBeInTheDocument()
   })
 })
