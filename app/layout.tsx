@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
-import { Press_Start_2P, Inter } from 'next/font/google'
+import { Playfair_Display, Inter } from 'next/font/google'
 import './globals.css'
 
-const pressStart2P = Press_Start_2P({
-  weight: '400',
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  variable: '--font-press-start',
+  variable: '--font-playfair',
 })
 
 const inter = Inter({
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${pressStart2P.variable} ${inter.variable} font-sans bg-white text-[#111111]`}>
+      <body className={`${playfair.variable} ${inter.variable} font-sans bg-cream text-ink`}>
         {children}
       </body>
     </html>

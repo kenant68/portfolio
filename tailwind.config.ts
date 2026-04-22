@@ -9,12 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        pink: '#FF2D78',
-        yellow: '#F9FF00',
-        black: '#111111',
+        cream: '#F5F0E8',
+        ink: '#1A1208',
+        burgundy: '#8B1A1A',
+        amber: '#C8920A',
       },
       fontFamily: {
-        pixel: ['var(--font-press-start)', 'monospace'],
+        serif: ['var(--font-playfair)', 'Georgia', 'serif'],
         sans: ['var(--font-inter)', 'sans-serif'],
       },
     },
