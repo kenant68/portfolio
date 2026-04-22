@@ -19,42 +19,48 @@ function LinkedInIcon({ className }: { className?: string }) {
 const links = [
   {
     label: 'GitHub',
+    sub: 'github.com/kenant68',
     href: 'https://github.com/kenant68',
     Icon: GitHubIcon,
-    border: 'border-[#FF2D78]',
-    hoverBg: 'hover:bg-[#FF2D78] hover:text-white',
+    topBorder: 'border-burgundy',
+    hover: 'hover:bg-burgundy hover:text-cream',
   },
   {
     label: 'LinkedIn',
+    sub: 'kenan-tekbas',
     href: 'https://www.linkedin.com/in/kenan-tekbas/',
     Icon: LinkedInIcon,
-    border: 'border-[#F9FF00]',
-    hoverBg: 'hover:bg-[#F9FF00] hover:text-[#111111]',
+    topBorder: 'border-amber',
+    hover: 'hover:bg-amber hover:text-ink',
   },
   {
     label: 'Email',
+    sub: 'tekbask8@gmail.com',
     href: 'mailto:tekbask8@gmail.com',
     Icon: Mail,
-    border: 'border-[#FF2D78]',
-    hoverBg: 'hover:bg-[#FF2D78] hover:text-white',
+    topBorder: 'border-burgundy',
+    hover: 'hover:bg-burgundy hover:text-cream',
   },
 ]
 
 export default function Links() {
   return (
-    <section className="py-24 px-4">
-      <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-        {links.map(({ label, href, Icon, border, hoverBg }) => (
+    <section className="py-24 px-8 md:px-16">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        {links.map(({ label, sub, href, Icon, topBorder, hover }) => (
           <a
             key={label}
             href={href}
             target={href.startsWith('mailto') ? undefined : '_blank'}
             rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
             aria-label={label}
-            className={`flex flex-col items-center gap-4 p-10 border-[3px] ${border} ${hoverBg} text-[#111111] transition-colors duration-150`}
+            className={`group border-t-4 ${topBorder} pt-6 pb-8 flex flex-col gap-3 text-ink ${hover} transition-colors duration-200`}
           >
-            <Icon className="w-8 h-8" />
-            <span className="font-pixel text-xs">{label}</span>
+            <Icon className="w-5 h-5" />
+            <span className="font-serif text-2xl italic">{label}</span>
+            <span className="font-sans text-xs tracking-wider text-ink/50 group-hover:text-current transition-colors">
+              {sub}
+            </span>
           </a>
         ))}
       </div>
